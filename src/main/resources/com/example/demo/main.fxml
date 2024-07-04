@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainController">
+   <children>
+      <Label alignment="CENTER" prefHeight="62.0" prefWidth="600.0" text="Student Grade Tracker" textFill="#100acc">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" prefHeight="71.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <VBox prefHeight="81.0" prefWidth="186.0" spacing="5.0">
+               <children>
+                  <Label text="Name : " textOverrun="CLIP">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="namefield" prefHeight="26.0" prefWidth="128.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="69.0" prefWidth="174.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="51.0" text="Course :">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="coursefield" prefHeight="26.0" prefWidth="152.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="89.0" prefWidth="177.0" spacing="5.0">
+               <children>
+                  <Label text="Grade : ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="gradefield" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="56.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Button fx:id="addstudent" mnemonicParsing="false" onAction="#addstudent" prefHeight="26.0" prefWidth="117.0" text="Add" textFill="#17c929" />
+            <Button fx:id="updatestudent" mnemonicParsing="false" onAction="#updatestudent" prefHeight="26.0" prefWidth="113.0" text="Update" textFill="#2b12e1" />
+            <Button fx:id="deletestudent" mnemonicParsing="false" onAction="#deletestudent" prefHeight="26.0" prefWidth="119.0" text="Delete" textFill="#c90d0d" />
+            <Button fx:id="clearfields" mnemonicParsing="false" onAction="#clearfields" prefHeight="26.0" prefWidth="120.0" text="Clear" textFill="#d78811" />
+         </children>
+      </HBox>
+      <TableView fx:id="studenttable" prefHeight="222.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="namecolumn" prefWidth="184.00000303983688" text="Name" />
+          <TableColumn fx:id="coursecolumn" prefWidth="252.7999725341797" text="Course" />
+            <TableColumn fx:id="gradecolumn" prefWidth="158.40008544921875" text="Grade" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
